@@ -13,9 +13,6 @@ document.querySelectorAll('[data-i18n]').forEach(node => {
 const keywordsDiv = document.querySelector('#keywordsDiv');
 const medias = document.querySelector('#medias');
 const popup = document.querySelector('.popup');
-const textOptionsBlock =  document.querySelector('#textOptionsBlock');
-const weekBlocked =  document.querySelector('#weekBlocked');
-const currentRadius = document.querySelector('#currentRadius');
 const popupMain = popup.children[0];
 
 let storageArea, minIndex = Number.MAX_SAFE_INTEGER;
@@ -29,29 +26,6 @@ browser.storage.local.get(null, result => {
   result ?  processOptions(result) : processOptions(result);
   result ?  processMedia(result) : processMedia(result);
 
-			if (typeof result.blockUntil != "undefined"){
-				const currentT = Date.now();
-				if (currentT < result.blockUntil){
-					console.log("if");
-					//textOptionsBlock.innerText="websites blocked until 7 days period elapsed.";
-					textOptionsBlock.style.display="none";
-					weekBlocked.style.display="block";
-				}else{
-					console.log("else");
-					//textOptionsBlock.innerHTML="Block all for one week.	<div style=\"text-align: right;\"><button data-i18n=\"weekBlock\" id=\"weekBlock\" type=\"submit\">  </button>	</div>";
-				textOptionsBlock.style.display="block";
-				weekBlocked.style.display="none";
-				}
-			}else{
-				textOptionsBlock.style.display="block";
-				weekBlocked.style.display="none";
-			}
-
-      if (typeof result.radius != "undefined"){
-      currentRadius.innerText="radius is "+result.radius;
-      }else{
-      currentRadius.innerText="radius is 1";
-      }
 });
 
 // ----------------- Spinner -------------------------------TO BE CHANGED
@@ -123,90 +97,7 @@ function processOptions(pref) {
 */
 function processMedia(pref) {
   browser.storage.local.get(null, result => {
-	  			if (typeof result.blockUntil != "undefined"){
-				const currentT = Date.now();
-					console.log("current"+currentT);
-					console.log(result.blockUntil);
-				if (currentT < result.blockUntil){
-					console.log("keyWords_weekblock");
-
-					//media button display none show blocked.!
-				  // --- reset
-				  medias.textContent = '';
-				  // ----- templates & containers
-				  const docfrag = document.createDocumentFragment();
-				  const docfrag2 = document.createDocumentFragment();
-				  const temp = document.querySelector('.templateMediaWeek');
-				console.dir(temp);
-				  // --- working directly with DB format
-				  const prefKeys = Object.keys(pref); // not for these
-				console.dir(pref.censorMedia);
-
-				  for(var i =0 ; i<pref.censorMedia.length; i++){
-					  var id=i;
-					const item = pref.censorMedia[id];
-
-					const div = temp.cloneNode(true);
-					const node = [...div.children[0].children];//, ...div.children[1].children];
-					div.classList.remove('templateMediaWeek');
-					div.id = id;
-
-					node[0].textContent = pref.censorMedia[id]; // ellipsis is handled by CSS
-					docfrag.appendChild(div);
-					// add to select
-					const opt = new Option(node[0].textContent, id);
-					opt.style.color = "";
-					docfrag2.appendChild(opt);
-				 }
-
-				  docfrag.hasChildNodes() && medias.appendChild(docfrag);
-				  // add Listeners
-				  document.querySelectorAll('button').forEach(item => item.addEventListener('click', processButton));
-
-				  doWeHaveMediaDefined();
-				  hideSpinner();
-
-				}else{
-						//do nothing
-					  // --- reset
-					  medias.textContent = '';
-					  // ----- templates & containers
-					  const docfrag = document.createDocumentFragment();
-					  const docfrag2 = document.createDocumentFragment();
-					  const temp = document.querySelector('.templateMedia');
-					console.dir(temp);
-					  // --- working directly with DB format
-					  const prefKeys = Object.keys(pref); // not for these
-					console.dir(pref.censorMedia);
-
-					  for(var i =0 ; i<pref.censorMedia.length; i++){
-						var id=i;
-						const item = pref.censorMedia[id];
-
-						const div = temp.cloneNode(true);
-						const node = [...div.children[0].children];//, ...div.children[1].children];
-						div.classList.remove('templateMedia');
-						div.id = id;
-
-						node[0].textContent = pref.censorMedia[id]; // ellipsis is handled by CSS
-
-						docfrag.appendChild(div);
-						// add to select
-						const opt = new Option(node[0].textContent, id);
-						opt.style.color = "";
-						docfrag2.appendChild(opt);
-					 }
-
-					  docfrag.hasChildNodes() && medias.appendChild(docfrag);
-					  // add Listeners
-					  document.querySelectorAll('button').forEach(item => item.addEventListener('click', processButton));
-
-					  doWeHaveMediaDefined();
-					  hideSpinner();
-
-				}
-			}else{
-									//do nothing
+	  			//do nothing
 				  // --- reset
 				  medias.textContent = '';
 				  // ----- templates & containers
@@ -246,7 +137,7 @@ function processMedia(pref) {
 				  doWeHaveMediaDefined();
 				  hideSpinner();
 
-			}
+			
   }  );
 }
 

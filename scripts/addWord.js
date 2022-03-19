@@ -13,10 +13,10 @@ document.querySelectorAll('[data-i18n]').forEach(node => {
 
 var MediaArray = [];
 var keywordArray  = [];
-var premium = false;
+
 
 /*
-** Getting keyword array, media array and premium status from browser storage.
+** Getting keyword array, media array  status from browser storage.
 */
 
 browser.storage.local.get(null, result => {
@@ -26,10 +26,7 @@ browser.storage.local.get(null, result => {
 			if(typeof result.censorMedia != "undefined"){// result.censorMedia
 				MediaArray = result.censorMedia;// result.censorMedia
 			}
-			if(typeof result.premium != "undefined" ){
-			  premium = result.premium ;
-			  console.log("premium");
-		  }
+
 });
 
 
@@ -40,32 +37,7 @@ browser.storage.local.get(null, result => {
 
 const newKeyword =  document.querySelector('#wordAddress');
 const newMedia =  document.querySelector('#mediaAddress');
-/*const formRadius = document.querySelector("#formRadius");
-// Add Listeners for each click on a button.
-formRadius.addEventListener("submit", function(event) {
-  var data = new FormData(formRadius);
-	console.dir(data);
-  var output = "";
-  for (const entry of data) {
-    output =  entry[1] ;
-  };
-	console.log(output);
-  //log.innerText = output;
 
-	browser.storage.local.set(changeRadius(output), () => {
-		location.href = '/keyWords.html' ;
-	});
-  event.preventDefault();
-}, false);
-
-
-
-function changeRadius(radVal) {
-
-  return {["radius"]: radVal};
-}
-
-*/
 
 
 document.querySelectorAll('button').forEach(item => item.addEventListener('click', process));
@@ -94,16 +66,6 @@ function process() {
 	  case 'saveMedia':
       if (!validateMedia()) { return; }
       browser.storage.local.set(makeMedia(), () => {
-        location.href = '/keyWords.html' ;
-      });
-      break;
-	  case 'weekBlock':
-      browser.storage.local.set(blockForOneWeek(), () => {
-        location.href = '/keyWords.html' ;
-      });
-      break;
-	  case 'weekU':
-      browser.storage.local.set(Ublock(), () => {
         location.href = '/keyWords.html' ;
       });
       break;
@@ -136,21 +98,7 @@ function validateMedia() {
   return true;
 }
 
-// send message "blockmedia" and return blocking deadline into object "blockUntil"
-function blockForOneWeek() {
-	const start = Date.now();
-	//var blockUntilMS = 604800000+start;// one week
-	var blockUntilMS = 604800000+start;// 60000 one min. this functionality likely  works but need live test.
-	browser.runtime.sendMessage({"blockMedia": "blockMedia"});
-	return {"blockUntil":blockUntilMS};
-}
 
-// returns current date and set "blockUntil" to this current date, hence unblocking immediately.
-function Ublock() {
-	const start = Date.now();
-	var blockUntilMS = start;
-	return {"blockUntil":blockUntilMS};
-}
 //UNIQUE AND SORT
 function uniq(a) {
     return a.sort().filter(function(item, pos, ary) {

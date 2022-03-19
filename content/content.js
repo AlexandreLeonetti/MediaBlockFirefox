@@ -73,32 +73,7 @@ browser.storage.local.get(null, result => {//
 
 
 var h1_h2_h3_h4_span_a_b_em_strong = (censorArr) => {
-
-		if(window.location.href.includes("youtube")){
-			console.log("youtube detected");
-			var h1 = document.querySelectorAll('h1, h2, h3, h4, strong,span, a, b , em').forEach(function(div){//
-				var strDiv = div.innerText;
-				for(var i=0; i<censorArr.length; i++){
-					if(strDiv.includes(censorArr[i])){
-					//	console.log(strDiv);
-						div.setAttribute('style', 'background-color:red !important; opacity:0 !important; color:red !important;');
-						radiusEliminator(0,div);
-					}else{}
-				}
-		 });
-	 }else if(window.location.href.includes("google")){// GOOGLE
-		 				console.log("gogle");
-						var totalElts = document.querySelectorAll('h1, h2, h3, h4, strong, a, b, em').forEach(function(div){
-								clearAllElts(div, censorArr);
-								picsEliminator(0, div, censorArr);
-						});
-						var totalElts = document.querySelectorAll('span, div').forEach(function(div){
-							clearAllUniqueElts(div, censorArr);
-							//picsEliminator(0, div, censorArr);
-						});
-
-	 }else{
-			//GENERAL CASE
+				//GENERAL CASE
 			console.log("nothing detected");
 
 			var h1 = document.querySelectorAll(' h1, h2, h3, h4, strong,span, a, b , em').forEach(function(div){//
@@ -107,14 +82,14 @@ var h1_h2_h3_h4_span_a_b_em_strong = (censorArr) => {
 					if(strDiv.includes(censorArr[i])){
 					//	console.log(strDiv);
 						div.setAttribute('style', 'background-color:red !important; opacity:0 !important; color:red !important;');
-						radiusEliminator(0,div);
+						//radiusEliminator(0,div);
 					}else{}
 				}
 		 });
-		}
+		
 }
 
-
+/*
 var radiusEliminator = (rad,division) => {
 	//FORCE RAD TO 1 // rad  =1 ;
 console.log("rad is "+rad);
@@ -154,15 +129,10 @@ console.log("rad is "+rad);
 						div.setAttribute('style', 'background-color:white !important; opacity:0 !important;');
 				 });
 		}else{
-				/*var imgs = document.querySelectorAll('img').forEach(function(img){
-					img.style.display='none';
-				 });
-					var videos = document.querySelectorAll('video').forEach(function(div){
-						div.setAttribute('style', 'background-color:white !important; opacity:0; color:white !important;');
-				 });*/
+
 			}
 
-}
+}*/
 
 /*var clearAllUniqueElts = (div) => {
 	var strDiv = div.innerText;

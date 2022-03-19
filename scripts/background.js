@@ -87,33 +87,17 @@ browser.storage.local.get(null, result => {
 			if(typeof result.censorMedia != "undefined"){
 				censorMedia = result.censorMedia;
 			}
-			const currentT = Date.now();
-			if (typeof result.blockUntil != "undefined"){
-				if (currentT < result.blockUntil){
-					blocked =1;			
-				}else{//set blockuntil or blocked to zero ??? 
-					if(typeof result.isMediaBlocking != "undefined"){
-						blocked =result.isMediaBlocking;
-					}					
-				}			
-			}else{
-					if(typeof result.isMediaBlocking != "undefined"){
-						blocked =result.isMediaBlocking;
-					}				
-			}
+
+			if(typeof result.isMediaBlocking != "undefined"){
+				blocked = result.isMediaBlocking;
+			}				
+			
 			if(typeof result.blocklist != "undefined"){//get blocklist from storage
 				blocklist = result.blocklist;
 				console.log(blocklist);
 				//censorMedia = censorMedia.concat(blocklist);
 			}
-			if(typeof result.savedCode != "undefined"){
-				if(typeof result.censorMedia != "undefined"){
-					censorMedia = result.censorMedia;
-				}
-				savedCode =result.savedCode;
-				console.log(savedCode);
-				//getAllUrls(savedCode);
-			}
+
 });
 
 //listens to storage censorMedia item changes and update current variable block list censorMedia accordingly.
