@@ -21,94 +21,7 @@
   <!-- FIRST SECTION RADIUS delete pictures around blocked keywords-->
   <!-- FIRST SECTION RADIUS delete pictures around blocked keywords-->
   <!-- FIRST SECTION RADIUS delete pictures around blocked keywords-->
-  <div class="prime">
-		<div style="display: flex;">
-			<nav><div class="keyWordsItems">Radius</div></nav>
-      <div class="rightColumn">
-  			<div class="addWord">
-  				 <div class="main flex wdth90" id="textOptionsBlock"  >Radius : Remove pictures around unwanted keyword, within a specified radius.
-             <div class="">
-  		         <h1 id="form-title">Select Radius</h1>
-               <form id="formRadius">
-               		<h1 id="form-title">Select Radius</h1>
-               		<div id="debt-amount-slider">
-               			<input type="radio" name="radius" id="1" value="1" >
-               			<label for="1" radius="1"></label>
-               			<input type="radio" name="radius" id="2" value="2" >
-               			<label for="2" radius="2"></label>
-               			<input type="radio" name="radius" id="3" value="3" >
-               			<label for="3" radius="3"></label>
-               			<input type="radio" name="radius" id="4" value="4" >
-               			<label for="4" radius="4"></label>
-               			<input style="display:none" type="radio" name="radius" id="5" value="5" >
-               			<label style="display:none" for="5" radius="5"></label>
-               			<div id="debt-amount-pos"></div>
-               		</div>
-                  <div style="text-align: right;margin-top:50px;">
-                    <button style="margin-left:100px;"data-i18n="changeRadius" id="changeRadius" type="submit"></button>
-                  </div>
-             	 </form>
-            </div>
-            <div class="main flex wdth90" id="currentRadius">current radius  </div>
-  				</div>
-  			</div>
-		  </div>
-		</div>
-	</div>
 
-
-  <!-- 2ND SECTION BLOCK KEYWORDS -->
-  <!-- 2ND SECTION BLOCK KEYWORDS -->
-  <!-- 2ND SECTION BLOCK KEYWORDS -->
-  <div class="prime">
-    <div style="display: flex;">
-      <nav>
-	      <div class="keyWordsItems">Keywords</div>
-      </nav>
-      <div id="rightColumn" class="rightColumn">
-  	    <!-- word list -->
-  		  <!-- main -->
-    		<div class=" addWord">
-    		  <div class="main flex wdth90">
-    				<div class="floatLeft">
-    				  <input id="wordAddress" type="text" spellcheck="false" placeholder="keyword"><div style="margin-left:10px;margin-right:100px;">*</div>
-              <!--<input style="display:block;min-width:200px;" type="file" accept=".txt" id="inputFile">-->
-              <div style="text-align: right;">
-              </div>
-  					</div>
-  					<div style="text-align: right;">
-              <label for="inputFile" class="inputFileButton">
-                Import From File
-              </label>
-              <input id="inputFile" type="file"/>
-  						<button type="submit" data-i18n="saveKeyword"></button>
-  				  </div>
-  			  </div>
-  			</div>
-  			<div id="keywordsDiv" class="wrapper"></div>
-  			<div id="help" style="text-align: center;margin: 5% auto"> <!-- try to center -->
-  				<span data-i18n="noCensoredWords"></span>
-  				Please click <a data-i18n="add" ><i class="fa fa-plus-circle"></i> </a> to start.
-  			</div>
-  			<br>
-			  <p style="text-align:justify;">* Keywords in the blocklist are all case sensitive.<br>Entering "Abc" in the blocklist will NOT block occurences of "ABC". You have to enter the exact syntax of the words you wish to block.
-        </p>
-        <div class="main flex wdth90">
-          <div style="text-align: right;">
-            <button id="deleteAllButtonKeywords" class="deleteAllButton" data-i18n="deleteAllKeywords">Delete All<!--<i class="fa fa-plus-circle"></i>--></button>
-          </div>
-        </div>
-        <!-- template -->
-				<div class="box template">
-				  <div style="text-align: left;" class="">
-						<span class="address "></span>
-						<span class="address "></span>
-						<button type="button" class="plain deleteElt" data-i18n="delete|title"><i class="fa fa-trash"></i></button>
-				  </div>
-				</div>
-      </div>
-    </div>
-  </div>
 
 
   <!--THIRD SECTION BLOCK WEBSITES-->
@@ -156,6 +69,59 @@
         </div>
       </div>
     </div>
+
+      <!-- 2ND SECTION BLOCK KEYWORDS -->
+      <!-- 2ND SECTION BLOCK KEYWORDS -->
+      <!-- 2ND SECTION BLOCK KEYWORDS -->
+      <div class="prime">
+        <div style="display: flex;">
+          <nav>
+    	      <div class="keyWordsItems">Keywords</div>
+          </nav>
+          <div id="rightColumn" class="rightColumn">
+      	    <!-- word list -->
+      		  <!-- main -->
+        		<div class=" addWord">
+        		  <div class="main flex wdth90">
+        				<div class="floatLeft">
+        				  <input id="wordAddress" type="text" spellcheck="false" placeholder="keyword"><div style="margin-left:10px;margin-right:100px;">*</div>
+                  <!--<input style="display:block;min-width:200px;" type="file" accept=".txt" id="inputFile">-->
+                  <div style="text-align: right;">
+                  </div>
+      					</div>
+      					<div style="text-align: right;">
+                  <label for="inputFile" class="inputFileButton">
+                    Import From File
+                  </label>
+                  <input id="inputFile" type="file"/>
+      						<button type="submit" data-i18n="saveKeyword"></button>
+      				  </div>
+      			  </div>
+      			</div>
+      			<div id="keywordsDiv" class="wrapper"></div>
+      			<div id="help" style="text-align: center;margin: 5% auto"> <!-- try to center -->
+      				<span data-i18n="noCensoredWords"></span>
+      				Please click <a data-i18n="add" ><i class="fa fa-plus-circle"></i> </a> to start.
+      			</div>
+      			<br>
+    			  <p style="text-align:justify;">* Keywords in the blocklist are all case sensitive.<br>Entering "Abc" in the blocklist will NOT block occurences of "ABC". You have to enter the exact syntax of the words you wish to block.
+            </p>
+            <div class="main flex wdth90">
+              <div style="text-align: right;">
+                <button id="deleteAllButtonKeywords" class="deleteAllButton" data-i18n="deleteAllKeywords">Delete All<!--<i class="fa fa-plus-circle"></i>--></button>
+              </div>
+            </div>
+            <!-- template -->
+    				<div class="box template">
+    				  <div style="text-align: left;" class="">
+    						<span class="address "></span>
+    						<span class="address "></span>
+    						<button type="button" class="plain deleteElt" data-i18n="delete|title"><i class="fa fa-trash"></i></button>
+    				  </div>
+    				</div>
+          </div>
+        </div>
+      </div>
 
     <!-- popup -->
     <!-- popup -->

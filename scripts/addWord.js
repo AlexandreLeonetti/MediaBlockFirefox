@@ -40,7 +40,7 @@ browser.storage.local.get(null, result => {
 
 const newKeyword =  document.querySelector('#wordAddress');
 const newMedia =  document.querySelector('#mediaAddress');
-const formRadius = document.querySelector("#formRadius");
+/*const formRadius = document.querySelector("#formRadius");
 // Add Listeners for each click on a button.
 formRadius.addEventListener("submit", function(event) {
   var data = new FormData(formRadius);
@@ -65,7 +65,7 @@ function changeRadius(radVal) {
   return {["radius"]: radVal};
 }
 
-
+*/
 
 
 document.querySelectorAll('button').forEach(item => item.addEventListener('click', process));
@@ -107,31 +107,6 @@ function process() {
         location.href = '/keyWords.html' ;
       });
       break;
-			/*case 'changeRadius':
-				browser.storage.local.set(changeRadius(), () => {
-					location.href = '/keyWords.html' ;
-				});
-				break;
-			case 'radius1':
-						browser.storage.local.set(changeRadius(1), () => {
-							location.href = '/keyWords.html' ;
-				});
-				break;
-				case 'radius2':
-								browser.storage.local.set(changeRadius(2), () => {
-									location.href = '/keyWords.html' ;
-				});
-				break;
-				case 'radius3':
-										browser.storage.local.set(changeRadius(3), () => {
-											location.href = '/keyWords.html' ;
-				});
-				break;
-				case 'radius4':
-												browser.storage.local.set(changeRadius(4), () => {
-													location.href = '/keyWords.html' ;
-				});
-				break;*/
   }
 }
 
