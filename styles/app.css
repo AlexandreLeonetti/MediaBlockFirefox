@@ -42,8 +42,7 @@ body::after {
   float:left;
 }
 .addWord{
-
-	height:5em;
+margin-bottom: 50px;
 }
 .flex > * {
   flex: 1;
@@ -117,7 +116,8 @@ td {
 
 button, .button {
 
-  background: #068485;
+  /*background: #068485;*/
+  background: #06dc85 ;/*6cda90*/
   border-radius: 10px;
   border: 0;
   color: #fff;
@@ -126,6 +126,7 @@ button, .button {
   font-size: 0.9em;
   font-weight: bold;
   margin: 0 0 0 0.5em;
+  margin-top:5px;
   min-width: 12em;
   padding: 1em 2em;
   text-align: center;
@@ -150,7 +151,7 @@ button.alert {
   background: #0067f8;
 }
 button.alert:hover {
-  background: #0067f8;
+  background: #1ff9a2;
 }
 
 button.plain {
@@ -165,7 +166,7 @@ button[type="submit"] {
 
 
 button[type="submit"]:hover {
-  background-color: #06dc85;
+  background-color: #1ff9a2;/*#06dc85;*/
 }
 
 
@@ -309,8 +310,10 @@ input.switch:checked + label::after {
 }
 
 .prime {
-
-  margin: 2em 16em 0 16em;
+  width:50%;
+  margin-left: 25%;
+margin-top: 2em;
+  /*margin: 2em 16em 0 16em;*/
   padding: 2em;
   border-radius: 15px;
   background-color: #ffffff;
@@ -374,10 +377,6 @@ input.switch:checked + label::after {
   background-color: #ebebeb;
 }
 
-.secondary:hover {
-  background: #d4d4d4;
-}
-
 .unsupported {
   background-color: #fce6e2;
   border: 1px solid #ccc;
@@ -390,7 +389,7 @@ input.switch:checked + label::after {
 
 
 .header {
-  color: #3e5b79;
+  color: #000;
   font-size: 1.5em;
   font-weight: bold;
   padding: 0em;
@@ -398,9 +397,9 @@ input.switch:checked + label::after {
   background:#f1f3f5;
 }
 .headerPopup {
-  color: #3e5b79;
+  color: #aaa;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 800;
   padding: 1em;
   margin : 0 0 0.5em 0 ;
   background:#ffffff;
@@ -440,7 +439,7 @@ input.switch:checked + label::after {
 .spinner {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #0067f8;
+  color: #91dba9;
   display: flex;
   font-size: 14em;
   height: 100%;
@@ -534,10 +533,10 @@ input.switch:checked + label::after {
 
 /* ----- fa ----- */
 i.fa {
-  color: #0067f8;
+  color: #91dba9;
   display: inline-block;
   text-align: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 i.fa:hover {
 
@@ -670,6 +669,7 @@ input[type="text"] + button i.fa.fa-eye {
 			grid-gap: 10px;
 			 /* background-color: #fff;*/
 			  color: #444;
+        min-height:100px;
 }
 @media only screen and (max-width: 1250px) {
 
@@ -681,8 +681,10 @@ input[type="text"] + button i.fa.fa-eye {
 						  color: #444;
 					}
 	  	.prime {
-
-				  margin: 2em 8em 0 8em;
+        width:64%;
+        margin-left: 16%;
+      margin-top: 2em;
+				  /*margin: 2em 8em 0 8em;*/
 				  padding: 2em;
 				  border-radius: 15px;
 				  background-color: #ffffff;
@@ -702,8 +704,10 @@ input[type="text"] + button i.fa.fa-eye {
 
 @media only screen and (max-width: 800px) {
 		    	.prime {
-
-  margin: 2em 2em 0 2em;
+            width:90%;
+            margin-left: 5%;
+          margin-top: 2em;
+  /*margin: 2em 2em 0 2em;*/
   padding: 2em;
   border-radius: 15px;
   background-color: #ffffff;
@@ -843,7 +847,7 @@ input:checked + .slider:before {
 }
 
 .keyWordsItems{
-	    color: #3e5b79;
+	    color: #000;
 		font-size: 1.5em;
 	    font-weight: bold;
 }
@@ -854,8 +858,8 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
       nav i.fa { margin-right: 0.4em; font-size: 1.6em; }
       nav a { display: block; padding: 0.2em 0.5em; border-radius: 0 50px 50px 0; cursor: pointer;  }
       nav a:hover { background-color: #ccccff; }
-      button i.fa { font-size: 1.8em; color: #ccc; }
-      button i.fa:hover { color: #09f; }
+      button i.fa { font-size: 1.8em; color: #999; }
+      button i.fa:hover { color: #fff; } /*{ color: #09f; }*/
       button[data-i18n="help|title"] { margin-right: 0.5em; }
       i.fa-lock { color: #ccc; font-size: 1.3em; vertical-align: middle; margin-right: 0.3em; }
       i.fa.fa-lock.on, i.fa-lock.on:hover { color: #080; }
@@ -880,7 +884,7 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
     white-space: nowrap;font-size: 1.2em;
     font-weight: 600;}
       .title { width: 6em; margin: 0 0.5em; }
-      .address { max-width: 10em; color:white; }
+      .address { max-width: 7em; color:white; text-overflow: ellipsis; }
 
 
       .scroll { max-height: 40vh; padding-right: 0.2em; }
@@ -899,11 +903,23 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
 
 
 .box {
-  background-color: #3e5b79;
+  background-color: #ddd;/* #3e5b79;*/
   color: #fff;
   border-radius: 5px;
   padding: 10px;
   font-size: 100%;
+  height:40px;
+}
+.blockedBox{
+  background-color: #91dba9;/* #6cda90;*/
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 100%;
+  font-weight:800;
+}
+.w800{
+font-weight:800 !IMPORTANT;
 }
 .weekBlocked{
 	padding-bottom:15px;
@@ -916,7 +932,7 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
 
 .inputFileButton{
   font-family: "MS Shell Dlg 2";
-background: #068485;/*#850706*/
+background: #06dc85;/*#850706*/
 border-radius: 10px;
 border: 0;
 color: #fff;
@@ -925,6 +941,7 @@ display: inline-block;
 font-size: 0.9em;
 font-weight: bold;
 margin: 0 0 0 0.5em;
+margin-top:5px;
 min-width: 15em;
 padding: 1em 2em;
 text-align: center;
@@ -935,7 +952,7 @@ vertical-align: middle;
 }
 .inputFileButton:hover{
   font-family: "MS Shell Dlg 2";
-background: #06dc85;
+background: #1ff9a2;
 border-radius: 10px;
 border: 0;
 color: #fff;
@@ -944,6 +961,7 @@ display: inline-block;
 font-size: 0.9em;
 font-weight: bold;
 margin: 0 0 0 0.5em;
+margin-top:5px;
 min-width: 15em;
 padding: 1em 2em;
 text-align: center;
@@ -955,7 +973,7 @@ vertical-align: middle;
 
 .deleteAllButton{
 font-family: "MS Shell Dlg 2";
-background: #850706;
+background: #888;/*#850706;*/
 border-radius: 10px;
 border: 0;
 color: #fff;
@@ -964,7 +982,7 @@ display: inline-block;
 font-size: 0.9em;
 font-weight: bold;
 margin: 0 0 0 0.5em;
-min-width: 15em;
+min-width: 12em;
 padding: 1em 2em;
 text-align: center;
 transition: all 0.3s ease-out;
@@ -986,11 +1004,16 @@ display: inline-block;
 font-size: 0.9em;
 font-weight: bold;
 margin: 0 0 0 0.5em;
-min-width: 15em;
+min-width: 12em;
 padding: 1em 2em;
 text-align: center;
 transition: all 0.3s ease-out;
 vertical-align: middle;
 -webkit-appearance: none;
 -moz-appearance: none;
+}
+
+
+#keywordsDiv{
+  margin-bottom:40px;
 }

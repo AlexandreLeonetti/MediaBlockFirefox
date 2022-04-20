@@ -25,7 +25,7 @@
   "modePatterns": { "message": "Use Enabled Proxies By Patterns and Order" },
   "modeDisabled": { "message": "Turn Off (Use Firefox Settings)" },
   "forAll": { "message": "for all URLs" },
-  "noCensoredWords": { "message": "You do not have any key words."},
+  "noCensoredWords": { "message": ""},
 
 
 

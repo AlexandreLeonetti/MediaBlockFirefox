@@ -137,7 +137,7 @@ function processMedia(pref) {
 				  doWeHaveMediaDefined();
 				  hideSpinner();
 
-			
+
   }  );
 }
 
@@ -146,7 +146,7 @@ function doWeHaveKeyWordsDefined() {
 
   if (!keywordsDiv.hasChildNodes()) {
 	  	console.log("doWeHaveKeyWordsDefined");
-    document.querySelector('#help').style.display = 'block';
+    document.querySelector('#help').style.display = 'none';
     //document.querySelector('#rightColumn').classList.add('secondary');
     //document.querySelector('#mode').style.display = 'none';
   }
@@ -161,7 +161,7 @@ function doWeHaveKeyWordsDefined() {
 function doWeHaveMediaDefined() {
   if (!medias.hasChildNodes()) {
 	  console.log("doWeHaveMediaDefined");
-    document.querySelector('#helpMedia').style.display = 'block';
+    document.querySelector('#helpMedia').style.display = 'none';
     document.querySelector('#rightColumnMedia').classList.add('secondary');
     //document.querySelector('#mode').style.display = 'none';
   }
