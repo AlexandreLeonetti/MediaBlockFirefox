@@ -1,7 +1,21 @@
+@font-face {
+  font-family: "cld";
+  src: url('fonts/cldMedium.ttf');
+}
+
+@font-face {
+  font-family: "cldBold";
+  src: url('fonts/cldBold.ttf');
+}
+
+@font-face {
+  font-family: "cldLight";
+  src: url('fonts/cldLight.ttf');
+}
 body {
   background-color: #f3f3f3;
   color: #333;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "cldLight","Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin: 0;
   padding: 1em;
   animation: fadein 0.3s ease-in-out;
@@ -115,7 +129,7 @@ td {
 
 
 button, .button {
-
+font-family: "cldLight";
   /*background: #068485;*/
   background: #06dc85 ;/*6cda90*/
   border-radius: 10px;
@@ -123,21 +137,21 @@ button, .button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.9em;
-  font-weight: bold;
+  font-size: 1em;
+  /*font-weight: bold;*/
   margin: 0 0 0 0.5em;
   margin-top:5px;
-  min-width: 12em;
-  padding: 1em 2em;
+  min-width: 9em;
+  padding: 0.85em 1.5em;
   text-align: center;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
   vertical-align: middle;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
 button:not(.plain):hover, .button:hover {
-  background: #06dc85;
+  background: #05c779;
   box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 }
 
@@ -166,7 +180,7 @@ button[type="submit"] {
 
 
 button[type="submit"]:hover {
-  background-color: #1ff9a2;/*#06dc85;*/
+  background-color: #05c779;/*#06dc85;*/
 }
 
 
@@ -391,7 +405,7 @@ margin-top: 2em;
 .header {
   color: #000;
   font-size: 1.5em;
-  font-weight: bold;
+  /*font-weight: bold;*/
   padding: 0em;
   margin: 0 ;
   background:#f1f3f5;
@@ -536,7 +550,7 @@ i.fa {
   color: #91dba9;
   display: inline-block;
   text-align: center;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 i.fa:hover {
 
@@ -847,9 +861,9 @@ input:checked + .slider:before {
 }
 
 .keyWordsItems{
-	    color: #000;
-		font-size: 1.5em;
-	    font-weight: bold;
+	  color: #000;
+		font-size: 1.4em;
+	    /*font-weight: bold;*/
 }
 
 /*from keyWord.html*/
@@ -859,7 +873,7 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
       nav a { display: block; padding: 0.2em 0.5em; border-radius: 0 50px 50px 0; cursor: pointer;  }
       nav a:hover { background-color: #ccccff; }
       button i.fa { font-size: 1.8em; color: #999; }
-      button i.fa:hover { color: #fff; } /*{ color: #09f; }*/
+      button i.fa:hover { color: #555; } /*{ color: #09f; }*/
       button[data-i18n="help|title"] { margin-right: 0.5em; }
       i.fa-lock { color: #ccc; font-size: 1.3em; vertical-align: middle; margin-right: 0.3em; }
       i.fa.fa-lock.on, i.fa-lock.on:hover { color: #080; }
@@ -880,9 +894,9 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
 			overflow-y: auto;
 			padding-right: 20px;
 		}
-      .title, .address { display: inline-block; vertical-align: middle;     overflow: hidden; margin-bottom: -0.3em;
+      .title, .address { display: inline-block; vertical-align: middle;     overflow: hidden; /*margin-bottom: -0.3em;*/
     white-space: nowrap;font-size: 1.2em;
-    font-weight: 600;}
+/*  font-weight: 600;*/}
       .title { width: 6em; margin: 0 0.5em; }
       .address { max-width: 7em; color:white; text-overflow: ellipsis; }
 
@@ -906,9 +920,10 @@ nav { width: 14em; margin-right: 0.5em;     min-width: 170px;}
   background-color: #ddd;/* #3e5b79;*/
   color: #fff;
   border-radius: 5px;
-  padding: 10px;
+  padding: 8px;
+  padding-left:15px;
   font-size: 100%;
-  height:40px;
+  height:35px;
 }
 .blockedBox{
   background-color: #91dba9;/* #6cda90;*/
@@ -931,19 +946,19 @@ font-weight:800 !IMPORTANT;
 
 
 .inputFileButton{
-  font-family: "MS Shell Dlg 2";
+  font-family: "cldLight";
 background: #06dc85;/*#850706*/
 border-radius: 10px;
 border: 0;
 color: #fff;
 cursor: pointer;
 display: inline-block;
-font-size: 0.9em;
-font-weight: bold;
+font-size: 1em;
+/*font-weight: bold;*/
 margin: 0 0 0 0.5em;
 margin-top:5px;
-min-width: 15em;
-padding: 1em 2em;
+
+padding: 0.85em 1.5em;
 text-align: center;
 transition: all 0.3s ease-out;
 vertical-align: middle;
@@ -951,41 +966,41 @@ vertical-align: middle;
 -moz-appearance: none;
 }
 .inputFileButton:hover{
-  font-family: "MS Shell Dlg 2";
-background: #1ff9a2;
+  font-family: "cldLight";
+background: #05c779;
 border-radius: 10px;
 border: 0;
 color: #fff;
 cursor: pointer;
 display: inline-block;
-font-size: 0.9em;
-font-weight: bold;
+font-size: 1em;
+/*font-weight: bold;*/
 margin: 0 0 0 0.5em;
 margin-top:5px;
-min-width: 15em;
-padding: 1em 2em;
+
+padding: 0.85em 1.5em;
 text-align: center;
-transition: all 0.3s ease-out;
+transition: all 0.2s ease-out;
 vertical-align: middle;
 -webkit-appearance: none;
 -moz-appearance: none;
 }
 
 .deleteAllButton{
-font-family: "MS Shell Dlg 2";
+font-family: "cldLight";
 background: #888;/*#850706;*/
 border-radius: 10px;
 border: 0;
 color: #fff;
 cursor: pointer;
 display: inline-block;
-font-size: 0.9em;
-font-weight: bold;
+font-size: 1em;
+/*font-weight: bold;*/
 margin: 0 0 0 0.5em;
-min-width: 12em;
-padding: 1em 2em;
+min-width: 9em;
+padding: 0.85em 1.5em;
 text-align: center;
-transition: all 0.3s ease-out;
+transition: all 0.2s ease-out;
 vertical-align: middle;
 -webkit-appearance: none;
 -moz-appearance: none;
@@ -994,20 +1009,19 @@ vertical-align: middle;
 
 
 #deleteAllButtonKeywords:hover{
-
+font-family: "cldLight";
 background: #a95150;
 border-radius: 10px;
 border: 0;
 color: #fff;
 cursor: pointer;
 display: inline-block;
-font-size: 0.9em;
-font-weight: bold;
+font-size: 1em;
+/*font-weight: bold;*/
 margin: 0 0 0 0.5em;
-min-width: 12em;
-padding: 1em 2em;
+
 text-align: center;
-transition: all 0.3s ease-out;
+transition: all 0.2s ease-out;
 vertical-align: middle;
 -webkit-appearance: none;
 -moz-appearance: none;
