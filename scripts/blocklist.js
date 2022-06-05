@@ -172,7 +172,6 @@ function doWeHaveMediaDefined() {
   }
 }
 
-
 // removeCensorElt this function removes keywords from the local memory
 function removeCensorElt(index){
 
@@ -210,7 +209,7 @@ function processButton() {
         removeCensorElt(id);
 		console.log("keyword"+id);
 		storageArea.remove(id);
-		 location.href = '/keyWords.html'
+		 location.href = '/blocklist.html'
       break;
 	case 'deleteMedia':
         parent.style.opacity = 0;
@@ -218,7 +217,7 @@ function processButton() {
         removeMediaElt(id);
 				console.log("media" +id);
 		storageArea.remove(id);
-		 location.href = '/keyWords.html'
+		 location.href = '/blocklist.html'
 
       break;
   }

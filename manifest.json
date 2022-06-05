@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "version": "0.0.1.8",
+  "version": "0.0.1.9",
   "default_locale": "en",
   "name": "mediaBlock",
   "description": "Disable all images and block unwanted website for one week. Import Blocklists",
-  "icons": { 
+  "icons": {
     "128": "icons/icon128.png"
   },
   "permissions": [

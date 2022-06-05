@@ -18,6 +18,42 @@
   .headerPopup{
     font-family: "cldBold";
   }
+
+
+  .hovertext {
+    position: relative;
+    /*border-bottom: 1px dotted black;*/
+  }
+
+  .hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background-color: #222;
+    color: #fff;
+    text-align: left;
+    font-size:12px;
+    border-radius: 5px;
+/*    padding: 5px 0;*/
+    transition: opacity 0.1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+    padding:10px;
+box-shadow : -10px 13px 30px 1px #444;
+  }
+
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+    margin-left:50px;
+  }
+
+
+
+
     </style>
   </head>
   <body>
@@ -31,14 +67,21 @@
 
 			<ul>
 				<li class="a">
-					<span class="lft b">Block Images</span>
+					<span data-hover="Block images" class="lft b hovertext">Images</span>
 					<label class="switch c">
 					  <input  id="cboxImages" type="checkbox" data-i18n="cboxImages">
 					  <span class="slider round"></span>
 					</label>
 				</li>
 				<li class="a">
-					<span class="lft b">Block Celebrities</span>
+					<span data-hover="Block Youtube recommendations, and other clickbaits. But you can still search videos and watch them." class="lft b hovertext">Clickbaits & Hooks</span>
+					<label  class="switch c">
+					  <input id="cboxUnhook" type="checkbox" data-i18n="cboxUnhook">
+					  <span  class="slider round"></span>
+					</label>
+				</li>
+				<li class="a">
+					<span data-hover="All unwanted celebrities and keywords become invisible." class="lft b hovertext">Celebrities</span>
 					<label class="switch c">
 					  <input id="cboxKeywords" type="checkbox" data-i18n="cboxKeywords">
 					  <span class="slider round"></span>
@@ -46,13 +89,13 @@
 				</li>
 
 				<li class="a">
-					<span id = "mediaSwitch"class="lft b">Block Websites</span>
+					<span data-hover="Blacklisted websites will be blocked" id = "mediaSwitch"class="lft b hovertext">Websites</span>
 					<label id="boxMedia" class="switch c">
 					  <input id="cboxMedia" type="checkbox" data-i18n="cboxMedia">
 					  <span id ="sliderMedia" class="slider round"></span>
 					</label>
 				</li>
-			</ul>
+		</ul>
 			<button type="button" data-i18n="censor">Block List</button>
         </div>
     </div>

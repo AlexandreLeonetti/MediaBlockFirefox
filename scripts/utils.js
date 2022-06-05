@@ -1,11 +1,5 @@
 'use strict';
 
-
-const DEFAULT_COLOR = '#66cc66'; // default proxy color
-
-// patterns | proxy
-// the local-internal blacklist, always used as a set
-
 // ----------------- Utils ---------------------------------
 class Utils {
 

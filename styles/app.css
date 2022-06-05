@@ -131,7 +131,7 @@ td {
 button, .button {
 font-family: "cldLight";
   /*background: #068485;*/
-  background: #06dc85 ;/*6cda90*/
+  background: #00e68a ;/*6cda90*/
   border-radius: 10px;
   border: 0;
   color: #fff;
@@ -687,6 +687,15 @@ input[type="text"] + button i.fa.fa-eye {
 }
 @media only screen and (max-width: 1250px) {
 
+  .header {
+        color: #3e5b79;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 0em;
+        margin: 0 ;
+        background:#f1f3f5;
+      }
+
 	  	  .wrapper {
 						display: grid;
 						grid-template-columns:  33% 33% 33%  ;
@@ -697,26 +706,39 @@ input[type="text"] + button i.fa.fa-eye {
 	  	.prime {
         width:64%;
         margin-left: 16%;
-      margin-top: 2em;
+        margin-top: 2em;
 				  /*margin: 2em 8em 0 8em;*/
 				  padding: 2em;
 				  border-radius: 15px;
-				  background-color: #ffffff;
+				background-color: #ffffff;
+				}
 
-				}
-	  .header {
-				  color: #3e5b79;
-				  font-size: 1.5em;
-				  font-weight: bold;
-				  padding: 0em;
-				  margin: 0 ;
-				  background:#f1f3f5;
-				}
+        .primeCorp {
+          width:64% !important;
+          margin-left: 16%!important;
+          margin-top: 2em!important;
+          /*margin: 2em 16em 0 16em;*/
+          /*padding: 2em;*/
+          border-radius: 15px;
+          background-color: #ffffff00;
+
+        }
+
+        .wrapperCorporations {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          column-gap:15px;
+        }
+        .wrapperCorporations > div {
+          flex: 1 1 150px;
+        }
+
 	  }
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 		    	.prime {
             width:90%;
             margin-left: 5%;
@@ -727,6 +749,26 @@ input[type="text"] + button i.fa.fa-eye {
   background-color: #ffffff;
 
 }
+.primeCorp {
+  width:90%!important;
+  margin-left: 5%!important;
+  margin-top: 2em!important;
+  /*margin: 2em 16em 0 16em;*/
+  /*padding: 2em;*/
+  border-radius: 15px;
+  background-color: #ffffff00;
+}
+.wrapperCorporations {
+  width: 100%!important;
+  display: block;
+}
+.corporation{
+  border-radius: 15px;
+  background-color: white;
+margin-bottom:1.5em;
+height:100px;
+}
+
 	  	  .wrapper {
 			display: grid;
 			grid-template-columns:   50%  50%  ;
@@ -1030,4 +1072,43 @@ vertical-align: middle;
 
 #keywordsDiv{
   margin-bottom:40px;
+}
+
+
+
+
+
+.corporation{
+  border-radius: 15px;
+  background-color: white;
+
+}
+
+
+.corp:hover{
+  border-radius: 15px;
+  background-color: #88ffcf;
+
+}
+
+@media only screen and (min-width: 1250px) {
+  .wrapperCorporations {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:15px;
+  }
+  .wrapperCorporations > div {
+    flex: 1 1 150px;
+  }
+
+}
+.primeCorp {
+  width:50%;
+  margin-left: 25%;
+  margin-top: 2em;
+  /*margin: 2em 16em 0 16em;*/
+  /*padding: 2em;*/
+  border-radius: 15px;
+  background-color: #ffffff00;
 }

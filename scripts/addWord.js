@@ -13,8 +13,10 @@ document.querySelectorAll('[data-i18n]').forEach(node => {
 
 var MediaArray = [];
 var keywordArray  = [];
+var keyWordInput = document.getElementById('wordAddress');
+var mediaAddress = document.getElementById('mediaAddress');
 
-
+//keyWordInput.focus();
 /*
 ** Getting keyword array, media array  status from browser storage.
 */
@@ -38,7 +40,7 @@ browser.storage.local.get(null, result => {
 const newKeyword =  document.querySelector('#wordAddress');
 const newMedia =  document.querySelector('#mediaAddress');
 
-
+// Add Listeners for each click on a button.
 
 document.querySelectorAll('button').forEach(item => item.addEventListener('click', process));
 
@@ -50,29 +52,48 @@ document.querySelectorAll('button').forEach(item => item.addEventListener('click
 function process() {
   switch (this.dataset.i18n) {
     case 'cancel':
-       location.href = '/keyWords.html';
+       location.href = '/blocklist.html';
       break;
       case 'saveKeyword':
       if (!validateInput()) { return; }
       browser.storage.local.set(makeword(), () => {
-        location.href = '/keyWords.html' ;
+        location.href = '/blocklist.html' ;
       });
       break;
 	  case 'deleteAllKeywords':
 				browser.storage.local.set(deleteAllKeyWords(), () => {
-					location.href = '/keyWords.html' ;
+					location.href = '/blocklist.html' ;
 				});
 	  break;
 	  case 'saveMedia':
       if (!validateMedia()) { return; }
       browser.storage.local.set(makeMedia(), () => {
-        location.href = '/keyWords.html' ;
+        location.href = '/blocklist.html' ;
       });
       break;
   }
 }
+//on key "enter" in keyword input save keyword.
+keyWordInput.onkeydown = function(e){
+   if(e.keyCode == 13 ){
+		 if (!validateInput()) { return; }else{
+			 browser.storage.local.set(makeword(), () => {
+				 location.href = '/blocklist.html' ;
+			 });
+	 	}
+   }
+};
 
-
+//on key "enter" in website blocklist save website.
+mediaAddress.onkeydown = function(e){
+   if(e.keyCode == 13 ){
+		 if (!validateMedia()) { return; }else{
+			 browser.storage.local.set(makeMedia(), () => {
+				 location.href = '/blocklist.html' ;
+			 });
+	 	}
+   }
+};
 
 // cleans entered keyword if incorrect char.
 function validateInput() {
@@ -156,9 +177,9 @@ document.getElementById('inputFile')
 								//for(var i=0; i<textByLine.length; i++){
 									browser.storage.local.set(makewordArray(textByLine), () => {
 											console.log("saved");
-											location.href = '/keyWords.html' ;
+											location.href = '/blocklist.html' ;
 									});
-									//location.href = '/keyWords.html' ;
+									//location.href = '/blocklist.html' ;
 							//	}
     }
 

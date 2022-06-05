@@ -16,15 +16,10 @@
   <div class="spinner on"><i class="fa fa-refresh fa-spin"></i></div>
   <!-- error -->
   <div id="error" class="prime hide"><h5 data-i18n="erroNoSettings"></h5></div>
-	<script src="scripts/index.js"></script>
 
-  <!-- FIRST SECTION RADIUS delete pictures around blocked keywords-->
-  <!-- FIRST SECTION RADIUS delete pictures around blocked keywords-->
-  <!-- FIRST SECTION RADIUS delete pictures around blocked keywords-->
 
-  <!-- 2ND SECTION BLOCK KEYWORDS -->
-  <!-- 2ND SECTION BLOCK KEYWORDS -->
-  <!-- 2ND SECTION BLOCK KEYWORDS -->
+  <!-- 1ST SECTION BLOCK KEYWORDS -->
+  <!-- 1ST SECTION BLOCK KEYWORDS -->
   <div class="prime">
     <div style="display: flex; min-height:150px;">
       <nav>
@@ -73,56 +68,53 @@
   </div>
 
 
-  <!--THIRD SECTION BLOCK WEBSITES-->
-  <!--THIRD SECTION BLOCK WEBSITES-->
-  <!--THIRD SECTION BLOCK WEBSITES-->
-  <div class="prime">
-    <div style="display: flex; min-height:150px;">
-      <nav>
-  		  <div class="keyWordsItems">Media</div>
-      </nav>
-      <div id="rightColumnMedia" class="rightColumn">
-        <div id="connError" style="color:red; font-weight:700; padding-bottom:10px;"> </div>
+  <!--2ND SECTION BLOCK WEBSITES-->
+  <!--2ND SECTION BLOCK WEBSITES-->
+<div class="prime">
+      <div style="display: flex; min-height:150px;">
+    	<nav>
+  		 <div class="keyWordsItems">Media</div>
+      	</nav>
+      	<div id="rightColumnMedia" class="rightColumn">
+         	 <div id="connError" style="color:red; font-weight:700; padding-bottom:10px;"> </div>
 				  <!-- word list -->
 				  <!-- main -->
-      		<div class=" addWord ">
+         	 <div class=" addWord ">
       		  <!--<div class="main  wdth90">wdth90-->
-      				<div class="">
-      				  <input id="mediaAddress" type="text" spellcheck="false" placeholder="cnn.com">
-      				</div>
-      			  <div style="text-align: right;">
-      					<button type="submit" data-i18n="saveMedia"><!--<i class="fa fa-plus-circle"></i>--></button>
+      	  	    <div class="">
+      		      <input id="mediaAddress" type="text" spellcheck="false" placeholder="cnn.com">
+      	 	    </div>
+      		    <div style="text-align: right;">
+      	 	       <button type="submit" data-i18n="saveMedia"><!--<i class="fa fa-plus-circle"></i>--></button>
       		    </div>
       	   <!-- </div>-->
-          </div>
-				  <div id="medias" class="wrapper"></div>
-				  <div id="helpMedia" style="text-align: center;margin: 5% auto"> <!-- try to center -->
-						<span data-i18n="noCensoredWords"></span>
-							       Please click <a data-i18n="add" ><i class="fa fa-plus-circle"></i> </a> to start.
-				  </div>
-				  <!-- template -->
-				  <div class="box templateMedia">
-						<div style="text-align: left;" class="">
-							<span class="address "></span>
-							<span class="address "></span>
-							<button type="button" class="plain deleteElt" data-i18n="deleteMedia"><i class="fa fa-trash"></i></button>
-						</div>
-				  </div>
+       		 </div>
+	  	 <div id="medias" class="wrapper"></div>
+		 	 <div id="helpMedia" style="text-align: center;margin: 5% auto"> <!-- try to center -->
+			<span data-i18n="noCensoredWords"></span>
+		       Please click <a data-i18n="add" ><i class="fa fa-plus-circle"></i> </a> to start.
+		 </div>
+	  <!-- template -->
+	 	 <div class="box templateMedia">
+			<div style="text-align: left;" class="">
+				<span class="address "></span>
+				<span class="address "></span>
+				<button type="button" class="plain deleteElt" data-i18n="deleteMedia"><i class="fa fa-trash"></i></button>
+			</div>
+		 </div>
 					<!-- template-week -->
-				  <div class="box weekBlocked templateMediaWeek">
-  					<div style="text-align: left;" class="">
-  						<span class="address "></span>
-  						<span class="address "></span>
-  					</div>
-					</div>
+		 <div class="box weekBlocked templateMediaWeek">
+  			<div style="text-align: left;" class="">
+ 	 			<span class="address "></span>
+	  			<span class="address "></span>
+  			</div>
+   		 </div>
         </div>
       </div>
     </div>
+   <!-- popup -->
+    <!-- popup -->
 
-
-    <!-- popup -->
-    <!-- popup -->
-    <!-- popup -->
     <div class="popup">
       <div>
         <h3></h3>
@@ -135,6 +127,6 @@
     </div>
     <script src="scripts/addWord.js"></script>
     <script src="scripts/utils.js"></script>
-    <script src="scripts/keyWords.js"></script>
+    <script src="scripts/blocklist.js"></script>
   </body>
 </html>
